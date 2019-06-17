@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  *
  * @author Kacper Staszek
  */
-@ComponentScan(basePackages = "autowire.e_postprocesor_ziarna")
+@ComponentScan(basePackages = "ja.workshops.spring.części.wstrzykiwanie_zależności_i_cykl_życia.e_postprocesor_ziarna")
 class Main {
 
   public static void main(String[] args) {

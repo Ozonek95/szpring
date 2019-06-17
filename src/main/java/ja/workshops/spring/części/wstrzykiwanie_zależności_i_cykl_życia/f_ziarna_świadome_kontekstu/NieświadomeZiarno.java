@@ -13,10 +13,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class NieświadomeZiarno {
 
-  ApplicationContext applicationContext;
+  ApplicationContext kontekstAplikacji;
 
-  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-    this.applicationContext = applicationContext;
+  public void setKontekstAplikacji(ApplicationContext kontekstAplikacji) throws BeansException {
+    this.kontekstAplikacji = kontekstAplikacji;
     System.out.println("ŚwiadomeZiarnoIntaface setter");
   }
 }

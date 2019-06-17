@@ -13,16 +13,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class ŚwiadomeZiarnoIntaface implements ApplicationContextAware {
 
-  ApplicationContext applicationContextInterface;
+  ApplicationContext kontekstAplikacjiInterfejs;
 
   @Override
   public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-    this.applicationContextInterface = applicationContext;
+    this.kontekstAplikacjiInterfejs = applicationContext;
     System.out.println("ŚwiadomeZiarnoIntaface setter");
   }
 
   void użycieZiarna() {
     System.out.println("Metoda z ŚwiadomeZiarnoIntaface");
-    applicationContextInterface.getBean(Ziarno.class).metodaZiarenka();
+    kontekstAplikacjiInterfejs.getBean(Ziarno.class).metodaZiarenka();
   }
 }

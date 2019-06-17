@@ -18,10 +18,10 @@ import org.springframework.context.annotation.ComponentScan;
 class WynajmemSamochodówApp {
 
   public static void main(String[] args) {
-    ApplicationContext context =
+    ApplicationContext kontekst =
         new AnnotationConfigApplicationContext(WynajmemSamochodówApp.class);
-    WynajęcieService wynajęcieService = context.getBean(WynajęcieService.class);
-    wynajęcieService.wydajSamochód(context.getBean(Klient.class),
-        context.getBean(Samochód.class), context.getBean(Salon.class));
+    WynajęcieService wynajęcieService = kontekst.getBean(WynajęcieService.class);
+    wynajęcieService.wydajSamochód(kontekst.getBean(Klient.class),
+        kontekst.getBean(Samochód.class), kontekst.getBean(Salon.class));
   }
 }

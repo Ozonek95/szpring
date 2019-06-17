@@ -14,10 +14,10 @@ import org.springframework.stereotype.Component;
 class ŚwiadomeZiarnoAdnotacja {
 
   @Autowired
-  ApplicationContext applicationContextAdnotacja;
+  ApplicationContext kontekstAplikacjiAdnotacja;
 
   void użycieZiarna() {
     System.out.println("Metoda z ŚwiadomeZiarnoAdnotacja");
-    applicationContextAdnotacja.getBean(Ziarno.class).metodaZiarenka();
+    kontekstAplikacjiAdnotacja.getBean(Ziarno.class).metodaZiarenka();
   }
 }

@@ -9,19 +9,19 @@ import org.springframework.context.annotation.ComponentScan;
  *
  * @author Marcin Ogorzalek
  */
-@ComponentScan(basePackages = {"autowire.f_ziarna_świadome_kontekstu"})
+@ComponentScan(basePackages = {"ja.workshops.spring.części.wstrzykiwanie_zależności_i_cykl_życia.f_ziarna_świadome_kontekstu"})
 public class ZiarnaŚwiadomeKontekstuApp {
 
   public static void main(String[] args) {
-    ApplicationContext context = new AnnotationConfigApplicationContext(ZiarnaŚwiadomeKontekstuApp.class);
-    context.getBean(ŚwiadomeZiarnoAdnotacja.class).użycieZiarna();
-    context.getBean(ŚwiadomeZiarnoIntaface.class).użycieZiarna();
+    ApplicationContext kontekst = new AnnotationConfigApplicationContext(ZiarnaŚwiadomeKontekstuApp.class);
+    kontekst.getBean(ŚwiadomeZiarnoAdnotacja.class).użycieZiarna();
+    kontekst.getBean(ŚwiadomeZiarnoIntaface.class).użycieZiarna();
 // FIXME: odkomentowanie poniższego wywołania spowoduje NullPointerException.
-//    context.getBean(NieświadomeZiarno.class).applicationContextAdnotacja.getBean(Ziarno.class).metodaZiarenka();
+//    kontekst.getBean(NieświadomeZiarno.class).kontekstAplikacjiAdnotacja.getBean(Ziarno.class).metodaZiarenka();
 // możliwe jest uzyskanie dowolnego ziarna obecnego w danym kontekście;
-    context
+    kontekst
         .getBean(ŚwiadomeZiarnoIntaface.class)
-        .applicationContextInterface
+        .kontekstAplikacjiInterfejs
         .getBean(ŚwiadomeZiarnoAdnotacja.class)
         .użycieZiarna();
   }

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * @author Jakub Czajka
  */
-@ComponentScan(basePackages = {"autowire.g_problem_zależności_cyklicznych.impementacja_interfejsów"})
+@ComponentScan(basePackages = {"ja.workshops.spring.części.wstrzykiwanie_zależności_i_cykl_życia.g_problem_zależności_cyklicznych.impementacja_interfejsów"})
 class Main {
 
   public static void main(String[] args) {

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @author Jakub Czajka
  */
 @Configuration
-@ComponentScan(basePackages = {"autowire.g_problem_zależności_cyklicznych.leniwa_inicjalizacja"})
+@ComponentScan(basePackages = {"ja.workshops.spring.części.wstrzykiwanie_zależności_i_cykl_życia.g_problem_zależności_cyklicznych.leniwa_inicjalizacja"})
 class Main {
 
   public static void main(String[] args) {
